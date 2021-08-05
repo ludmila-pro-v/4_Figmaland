@@ -4,6 +4,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
+
 }
 
 html,
@@ -13,6 +14,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: $dark;
 }
 
 h1,
@@ -37,7 +39,7 @@ h1 {
 
 h2 {
   font-size: 46px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 57px;
   letter-spacing: 0.2px;
 
@@ -55,6 +57,7 @@ h4 {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.2px;
+  color: $gray;
 }
 
 h5 {
@@ -63,12 +66,15 @@ h5 {
   line-height: 18px;
   letter-spacing: 0.1px;
   margin: 0;
+  color: $gray;
 }
 
 p {
   font-size: 18px;
+  font-weight: normal;
   line-height: 27px;
   letter-spacing: 0.2px;
+  color: $gray;
 
 }
 
@@ -151,6 +157,12 @@ section {
   flex-direction: column;
   align-items: center;
 
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin: auto;
 }
 
 .header {
@@ -359,6 +371,22 @@ section {
     height: auto;
   }
 
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100vh;
+    min-height: 475px;
+    color: $light;
+    background-size: cover;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+    }
+  }
+
   &__wrapper {
     height: 935px;
     background: url(../img/background-content.svg) no-repeat bottom;
@@ -381,8 +409,7 @@ section {
   &__serch-bar {
     border: 11px solid #E2E3E5;
     height: 42px;
-    width: 651px;
-    min-width: 100%;
+    width: 949px;
     position: absolute;
     right: 0;
 
@@ -396,13 +423,14 @@ section {
 
   &__image-wrapper {
     background-color: $light;
-    width: 54vw;
+    width: 949px;
+    max-width: 54vw;
     min-height: 65%;
     position: relative;
     overflow: hidden;
 
     @media screen and (max-width: 500px) {
-      width: 90%;
+      max-width: 90%;
       margin: auto;
       margin-bottom: 65px;
       height: 212px;
@@ -413,8 +441,8 @@ section {
       position: absolute;
       top: 42px;
       right: 0;
-      min-width: 100%;
-      min-height: 100%;
+      width: 949px;
+
 
       @media screen and (max-width: 500px) {
         position: relative;
@@ -519,6 +547,10 @@ section {
 .feature {
   padding-top: 227px;
 
+  @media screen and (max-width: 900px) {
+    padding-top: 100px;
+  }
+
 
   &__image {
     &-wrapper {
@@ -534,18 +566,19 @@ section {
 
   &__row {
     width: 869px;
-    max-width: 90%;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 900px) {
+      width: 100%;
       flex-direction: column;
     }
   }
 
   &__column {
-    width: 255px;
+    width: 29%;
     margin-bottom: 95px;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 900px) {
+      width: 255px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -576,6 +609,10 @@ section {
   padding-bottom: 133px;
   text-align: center;
 
+  @media screen and (max-width: 500px) {
+    padding-bottom: 86px;
+  }
+
   &__title {
     max-width: 296px;
     margin-bottom: 27px;
@@ -584,15 +621,23 @@ section {
   &__subtitle {
     max-width: 298px;
     margin-bottom: 90px;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 69px;
+    }
   }
 
   &>button {
     padding: 19px 58px;
     margin-bottom: 113px;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 65px;
+    }
   }
 
   &__screen {
-    width: 843px;
+    width: 796px;
     max-width: 70%;
     background: #000000;
     border: 8.92954px solid #9FA2A5;
@@ -600,9 +645,21 @@ section {
     box-sizing: border-box;
     border-radius: 26.7886px 26.7886px 0px 0px;
 
+    @media screen and (max-width: 500px) {
+      // border: 4px solid #9FA2A5;
+      // border-bottom: 0;
+      // box-sizing: border-box;
+      // border-radius: 9px 9px 0px 0px;
+      display: none;
+    }
+
     &>img {
       width: 100%;
       padding: 9px;
+
+      @media screen and (max-width: 500px) {
+        padding: 4px;
+      }
     }
 
     &-bottom {
@@ -615,13 +672,31 @@ section {
       display: flex;
       justify-content: center;
 
+      @media screen and (max-width: 500px) {
+        // height: 12px;
+        // border-bottom: 5px solid #9FA2A5;
+        // border-radius: 0 0 5px 5px;
+        display: none;
+      }
+
+
+
       &::before {
         content: '';
         height: 12px;
         width: 138px;
         border-bottom: 12px solid #9FA2A5;
         border-radius: 0 0 12px 12px;
+
+        @media screen and (max-width: 500px) {
+          content: '';
+          height: 4px;
+          border-bottom: 4px solid #9fa2a5;
+          border-radius: 0 0 4px 4px;
+        }
       }
+
+
     }
 
 
@@ -636,7 +711,7 @@ section {
   background: $bg-gradient;
   color: $light;
   padding-top: 81px;
-  padding-bottom: 109px;
+  padding-bottom: 114px;
   text-align: center;
 
   h2 {
@@ -653,6 +728,7 @@ section {
 
   p {
     margin-bottom: 34px;
+    color: $light;
   }
 
   form {
@@ -689,7 +765,7 @@ section {
         background: $light;
         border: 1px solid $primary;
       }
-  
+
     }
   }
 }
@@ -700,6 +776,11 @@ section {
   padding-top: 130px;
   padding-bottom: 80px;
   text-align: center;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
 
   button {
     padding: 16px 58px;
@@ -716,18 +797,29 @@ section {
 
   &__row {
     width: 798px;
-    max-width: 90%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 27% 27% 27%;
+    grid-template-rows: 50% 50%;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      justify-content: space-evenly;
+      grid-template-columns: 40% 40%;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 50%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+
   }
 
   &__column {
-    width: 218px;
     margin-bottom: 90px;
-
-    @media screen and (max-width: 500px) {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    justify-self: center;
 
     h5 {
       margin-bottom: 25px;
@@ -814,7 +906,8 @@ section {
   padding-bottom: 100px;
   text-align: center;
 
-  @media screen and (max-width: 1120px) {
+  @media screen and (max-width: 1150px) {
+    padding-top: 70px;
     padding-bottom: 68px;
   }
 
@@ -829,17 +922,16 @@ section {
 
   &__row {
     width: 1105px;
-    max-width: 90%;
     text-align: start;
 
-    @media screen and (max-width: 1120px) {
+    @media screen and (max-width: 1150px) {
+      width: 100%;
       flex-direction: column;
     }
   }
 
   &__column {
-    width: 335px;
-    max-width: 95%;
+    width: 30.3%;
     height: 310px;
     border: 1px solid #DEDEDE;
     box-sizing: border-box;
@@ -847,9 +939,15 @@ section {
     border-radius: 10px;
     padding: 43px 40px;
 
-    @media screen and (max-width: 1120px) {
+    @media screen and (max-width: 1150px) {
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 50px;
+      width: 335px;
+    }
+
+    @media screen and (max-width: 380px) {
+      width: 90%;
     }
 
     &:hover {
@@ -860,6 +958,11 @@ section {
         color: $primary;
         background: $light;
         border: 1px solid transparent;
+      }
+
+      h5,
+      p {
+        color: $light;
       }
     }
 
@@ -929,13 +1032,17 @@ section {
   background-color: $dark;
   color: $light;
   padding-top: 95px;
-  // padding-bottom: 85px;
   text-align: center;
 
 
 
   h2 {
     margin-bottom: 27px;
+  }
+
+  h4,
+  h5 {
+    color: $light;
   }
 
   &__subtitle {
@@ -973,8 +1080,8 @@ section {
     @media screen and (max-width: 800px) {
       margin-left: auto;
       margin-right: auto;
-      padding: 130px 49px 52px;
-      height: 670px;
+      padding: 60px 49px 52px;
+      height: 630px;
     }
 
     @media screen and (max-width: 450px) {
@@ -991,9 +1098,7 @@ section {
       line-height: 35px;
       box-sizing: border-box;
       margin-bottom: 31px;
-
-
-
+      -webkit-appearance: none;
     }
 
     &::placeholder {
