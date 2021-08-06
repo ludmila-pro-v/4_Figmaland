@@ -90,6 +90,9 @@ button,
   padding: 18px 39px;
   font-family: 'Roboto', sans-serif;
   background-color: $light;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
 }
 
 button,
@@ -371,6 +374,10 @@ section {
     height: auto;
   }
 
+  h4 {
+    color: $light;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -421,9 +428,9 @@ section {
     }
   }
 
-  &__image-wrapper {
+  &__image {
     background-color: $light;
-    width: 949px;
+    width: 651px;
     max-width: 54vw;
     min-height: 65%;
     position: relative;
@@ -439,9 +446,9 @@ section {
 
     img {
       position: absolute;
-      top: 42px;
+      top: 0;
       right: 0;
-      width: 949px;
+      width: 651px;
 
 
       @media screen and (max-width: 500px) {
@@ -1098,7 +1105,7 @@ section {
       line-height: 35px;
       box-sizing: border-box;
       margin-bottom: 31px;
-      -webkit-appearance: none;
+      // -webkit-appearance: none;
     }
 
     &::placeholder {
@@ -1126,6 +1133,9 @@ section {
     outline: none;
     font-family: 'Roboto', sans-serif;
     height: 126px;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
 
     @media screen and (max-width: 800px) {
       height: 193px;

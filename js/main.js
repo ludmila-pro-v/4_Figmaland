@@ -31,7 +31,7 @@ for (let scrollButton of scrollButtons) {
 
     document.querySelector(blockID).scrollIntoView({
       behavior: 'smooth',
-      block: 'center'
+      block: 'start'
     });
   });
 }
