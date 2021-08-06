@@ -4,7 +4,6 @@
 *:before,
 *:after {
   box-sizing: border-box;
-
 }
 
 html,
@@ -915,7 +914,7 @@ section {
 
   @media screen and (max-width: 1150px) {
     padding-top: 70px;
-    padding-bottom: 68px;
+    padding-bottom: 55px;
   }
 
   h2 {
@@ -1041,6 +1040,9 @@ section {
   padding-top: 95px;
   text-align: center;
 
+  @media screen and (max-width: 800px) {
+    padding-top: 75px;
+  }
 
 
   h2 {
